@@ -10,8 +10,10 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+  //if message startswith !getprice
   if (message.content.startsWith('!getprice')) {
     let coin = message.content.split(' ')[1];
+    // check to see if coin is empty
     if (!coin) {
       message.channel.send('You have to give me the name of the coin to search for!');
     } else {
